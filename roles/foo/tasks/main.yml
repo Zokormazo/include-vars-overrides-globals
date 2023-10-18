@@ -1,0 +1,8 @@
+---
+- name: include vars
+  ansible.builtin.include_vars:
+    file: vars.yml
+
+- name: print var
+  debug:
+    var: overridden_var

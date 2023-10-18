@@ -1,0 +1,8 @@
+---
+- name: include vars overrides global test
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: run test
+      ansible.builtin.import_role:
+        name: foo

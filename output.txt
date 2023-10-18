@@ -1,0 +1,14 @@
+
+PLAY [include vars overrides global test] **************************************
+
+TASK [foo : include vars] ******************************************************
+ok: [localhost]
+
+TASK [foo : print var] *********************************************************
+ok: [localhost] => {
+    "overridden_var": "var from include_vars"
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
